@@ -1,0 +1,40 @@
+<html>
+    
+    <head>
+        
+        <title>Faith Game</title>
+        
+    </head>
+    
+    <body>
+        <p>on a scale of 1-50 choose a number,<br> if you get it in the first time a wish will be fulfilled</p>
+        
+        <p><input type="text" id="guess"></p>    <button id="checkGuess">Submit</button>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("checkGuess").onclick = function() {
+                
+                var randomNumber = Math.random();
+                
+                randomNumber = randomNumber * 50;
+                
+                randomNumber = Math.floor(randomNumber);
+            
+                if (document.getElementById("guess").value == randomNumber) {
+                    
+                    alert("Well done! You've got it!");
+                    
+                } else {
+                    
+                    alert("Nope, you're unlucky. The number was " + randomNumber);
+                }
+            }
+            
+            
+            
+        </script>
+        
+    </body>
+ 
+</html> 
